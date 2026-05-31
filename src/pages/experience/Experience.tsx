@@ -8,6 +8,7 @@ import { Cursor } from "@/components/motion/Cursor";
 import { Grain } from "@/components/motion/Grain";
 import { RevealText } from "@/components/motion/RevealText";
 import { Reveal } from "@/components/Reveal";
+import { Seo } from "@/components/Seo";
 import { Door } from "./Door";
 import { Chapter, type ChapterHotspot } from "./Chapter";
 import { ProductDrawer } from "./ProductDrawer";
@@ -80,6 +81,11 @@ export function Experience() {
 
   return (
     <div className="relative bg-[#111319] text-paper">
+      <Seo
+        title="The Linen Solutions | Luxury Pure Linen for Homes & Hotels in Sri Lanka"
+        description="Step inside a room dressed entirely in pure linen. The Linen Solutions crafts 100% European-flax bed, bath, table & living linen in Colombo, Sri Lanka — for homes, hotels and villas. Shipped nationwide & worldwide."
+        path="/"
+      />
       <SmoothScroll />
       <Cursor />
       <Grain />

@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { useSiteData } from "@/lib/data/DataContext";
 import { Reveal } from "@/components/Reveal";
 import { RevealText } from "@/components/motion/RevealText";
+import { Seo } from "@/components/Seo";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -34,8 +35,52 @@ export function Contact() {
     { icon: Clock, label: "Opening hours", value: c.hours },
   ];
 
+  const faqs = [
+    {
+      q: "Where can I buy quality pure linen in Sri Lanka?",
+      a: `The Linen Solutions is a pure-linen house based in Colombo, Sri Lanka. You can browse the full collection online and order directly, or visit our studio at ${c.address}. We deliver across Sri Lanka and ship worldwide.`,
+    },
+    {
+      q: "Do you supply linen to hotels, villas and guesthouses?",
+      a: "Yes. We supply bed linen, bath linen and table linen in bulk to boutique hotels, villas and guesthouses across Sri Lanka, with custom sizes and quantities available. Contact us for trade and wholesale pricing.",
+    },
+    {
+      q: "What linen products do you offer?",
+      a: "Bed linen (duvet covers, sheet sets, pillowcases), bath linen (waffle towels, bathrobes, bath mats), table linen (tablecloths, napkins, runners) and living textiles (sheer curtains, throws, cushion covers).",
+    },
+    {
+      q: "Is your linen 100% pure linen?",
+      a: "Yes — our pieces are woven from 100% European flax and stonewashed for softness. Our textiles are OEKO-TEX® certified, so they are free from harmful substances and safe for sensitive skin.",
+    },
+    {
+      q: "Do you deliver across Sri Lanka and internationally?",
+      a: "Yes. We deliver throughout Sri Lanka and offer carbon-considered worldwide shipping, wrapped in plastic-free packaging.",
+    },
+    {
+      q: "How do I place an order?",
+      a: `Call or WhatsApp us on ${c.phone}, email ${c.email}, or visit our Colombo studio. We'll help you choose sizes and colours and arrange delivery.`,
+    },
+  ];
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      <Seo
+        title="Contact — Buy Linen in Sri Lanka | The Linen Solutions, Colombo"
+        description="Order pure linen or enquire about hotel & villa supply. The Linen Solutions, Colombo, Sri Lanka — call/WhatsApp 0768093244. Delivery across Sri Lanka & worldwide."
+        path="/contact"
+        keywords="buy linen Sri Lanka, linen shop Colombo, hotel linen supplier Sri Lanka, order linen online Sri Lanka"
+        jsonLd={faqLd}
+      />
       <section className="container-tight pt-32 md:pt-36">
         <div className="flex flex-wrap items-center justify-between gap-y-2 border-t border-ink/15 py-3 text-[10px] font-medium uppercase tracking-[0.22em] text-ink/50">
           <span>Contact</span>
@@ -120,6 +165,31 @@ export function Contact() {
           </div>
         </Reveal>
       </div>
+
+      {/* FAQ — answers the questions buyers search for (AEO/GEO) */}
+      <section className="border-t border-linen-200 bg-linen-100/40">
+        <div className="container-tight py-16 md:py-24">
+          <Reveal className="mb-10 text-center">
+            <p className="eyebrow justify-center">Good to know</p>
+            <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl">
+              Frequently asked questions
+            </h2>
+          </Reveal>
+          <div className="mx-auto max-w-3xl divide-y divide-linen-200 border-y border-linen-200">
+            {faqs.map((f) => (
+              <details key={f.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-serif text-lg text-foreground marker:content-['']">
+                  {f.q}
+                  <span className="shrink-0 text-clay-600 transition-transform duration-300 group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

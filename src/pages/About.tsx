@@ -3,6 +3,7 @@ import { Leaf, Hand, Recycle, Sparkles } from "lucide-react";
 import { useSiteData } from "@/lib/data/DataContext";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { Reveal } from "@/components/Reveal";
+import { Seo } from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 
 const steps = [
@@ -35,6 +36,11 @@ export function About() {
 
   return (
     <>
+      <Seo
+        title="Our Story — Pure Linen Handcrafted in Colombo | The Linen Solutions"
+        description="From a small Colombo atelier to a linen house trusted by homes, hotels and villas across Sri Lanka and beyond. 100% European flax, stonewashed by hand, OEKO-TEX® certified."
+        path="/about"
+      />
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-center overflow-hidden pt-20">
         <div className="absolute inset-0">

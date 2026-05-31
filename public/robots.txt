@@ -1,0 +1,21 @@
+# The Linen Solutions — allow all crawlers, including AI answer engines (GEO).
+User-agent: *
+Allow: /
+
+# Common AI / answer-engine crawlers (explicitly welcomed for GEO/AEO)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://thelinensolutions.com/sitemap.xml

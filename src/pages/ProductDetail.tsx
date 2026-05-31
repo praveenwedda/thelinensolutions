@@ -7,6 +7,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/Reveal";
+import { Seo, SITE_URL } from "@/components/Seo";
 import { cn } from "@/lib/utils";
 
 export function ProductDetail() {
@@ -53,8 +54,29 @@ export function ProductDetail() {
     { id: "care", label: "Care", body: product.care },
   ];
 
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images,
+    description: product.description,
+    category: category?.name,
+    brand: { "@type": "Brand", name: "The Linen Solutions" },
+    material: product.materials,
+    color: product.colors.join(", "),
+    url: `${SITE_URL}/product/${product.slug}`,
+    countryOfOrigin: "Sri Lanka",
+  };
+
   return (
     <article className="pt-24">
+      <Seo
+        title={`${product.name} — Pure Linen | The Linen Solutions, Sri Lanka`}
+        description={`${product.shortDescription} Woven from ${product.materials.toLowerCase()}, available in ${product.colors.join(", ")}. From The Linen Solutions, Colombo, Sri Lanka.`}
+        path={`/product/${product.slug}`}
+        image={product.images[0]}
+        jsonLd={productLd}
+      />
       <div className="container-tight">
         <Link
           to="/shop"
