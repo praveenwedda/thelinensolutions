@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.local
+.DS_Store
+.vite
+*.log
+npm-debug.log*
+
+# Local Claude Code tooling — not part of the website
+.claude/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+vite.config.d.ts
