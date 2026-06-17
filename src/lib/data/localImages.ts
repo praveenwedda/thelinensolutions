@@ -13,6 +13,10 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
     name: "Core Linen Sheet Set",
     images: [`${base}bedding1.jpg`, `${base}bedding2.jpg`],
   },
+  p_towel_waffle: {
+    name: "Bath Towel — Natural",
+    images: [`${base}towels1.jpg`, `${base}towels2.jpg`],
+  },
 };
 
 /** Apply the bundled product overrides to freshly loaded site data. */
