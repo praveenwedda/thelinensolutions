@@ -50,6 +50,11 @@ const CHAPTER_IMAGES: Record<string, string> = {
 export function applyImageOverrides(data: SiteData): SiteData {
   const merged: SiteData = {
     ...data,
+    content: {
+      ...data.content,
+      // "From the flax field to your home" story image (rotated linen weave).
+      story: { ...data.content.story, image: `${base}Linenweave.jpg` },
+    },
     products: data.products.map((p) => {
       const o = PRODUCT_OVERRIDES[p.id];
       return o ? { ...p, ...o } : p;
