@@ -24,6 +24,9 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
     name: "Stonewashed Duvet Cover",
     images: [`${base}duvet1.jpg`, `${base}duvet2.jpg`],
   },
+  p_napkins: {
+    images: [`${base}napkins1.jpg`, `${base}napkins2.jpg`],
+  },
 };
 
 /** Apply the bundled product overrides to freshly loaded site data. */
