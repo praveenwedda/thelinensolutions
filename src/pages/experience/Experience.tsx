@@ -13,8 +13,9 @@ import { Door } from "./Door";
 import { Chapter, type ChapterHotspot } from "./Chapter";
 import { ProductDrawer } from "./ProductDrawer";
 
-// The bedroom scene uses our own bundled photo (public/bedroom.jpg) rather than a
-// remote/backend image, and the markers are re-positioned to sit on this photo.
+// The opening scene (revealed behind the doors, before the bedroom) and the
+// bedroom scene both use our own bundled photos rather than remote/backend images.
+const HERO_IMAGE = `${import.meta.env.BASE_URL}heroimage.jpg`;
 const BEDROOM_IMAGE = `${import.meta.env.BASE_URL}bedroom.jpg`;
 const BEDROOM_HOTSPOTS: Record<string, { x: number; y: number }> = {
   p_curtains: { x: 9, y: 38 },
@@ -58,7 +59,7 @@ export function Experience() {
       });
   }, [data]);
 
-  const roomImage = chapters[0]?.image || data?.content.hero.image || "";
+  const roomImage = HERO_IMAGE;
 
   // highlight the chapter in view
   useEffect(() => {
