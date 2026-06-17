@@ -27,6 +27,10 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
   p_napkins: {
     images: [`${base}napkins1.jpg`, `${base}napkins2.jpg`],
   },
+  p_robe_waffle: {
+    name: "Waffle Bath Robe",
+    images: [`${base}robe1.jpg`, `${base}robe2.jpg`],
+  },
 };
 
 /** Apply the bundled product overrides to freshly loaded site data. */
