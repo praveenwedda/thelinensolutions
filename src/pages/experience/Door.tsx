@@ -64,7 +64,7 @@ export function Door({ roomImage }: { roomImage: string }) {
         >
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[140%] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(14,11,8,0.7)_0%,transparent_60%)]" />
           <p
-            className="relative text-[11px] font-medium uppercase tracking-[0.4em] text-clay-200"
+            className="relative hidden text-[11px] font-medium uppercase tracking-[0.4em] text-clay-200 sm:block"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.7)" }}
           >
             Room Twenty-Four · Colombo
