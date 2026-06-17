@@ -77,10 +77,12 @@ export function Chapter({ chapter, hotspots, activeId, onSelect }: ChapterProps)
             src={chapter.image}
             alt={chapter.heading}
             fallbackLabel={chapter.place}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover brightness-105"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#111319] via-[#111319]/15 to-[#111319]/25" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_48%,rgba(0,0,0,0.5))]" />
+          {/* soft bottom scrim only — keeps the copy legible without tinting the whole photo */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#111319]/80 via-[#111319]/8 to-transparent" />
+          {/* gentle vignette for depth */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_64%,rgba(0,0,0,0.18))]" />
         </motion.div>
       </motion.div>
 
