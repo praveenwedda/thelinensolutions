@@ -94,11 +94,6 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-paper/70">
             <li>{c?.contact.address || "Colombo, Sri Lanka"}</li>
             <li>
-              <a href={`tel:${c?.contact.phone || "0768093244"}`} className="link-underline">
-                {c?.contact.phone || "0768093244"}
-              </a>
-            </li>
-            <li>
               <a href={`mailto:${c?.contact.email || "hello@thelinensolutions.com"}`} className="link-underline">
                 {c?.contact.email || "hello@thelinensolutions.com"}
               </a>

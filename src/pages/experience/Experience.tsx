@@ -13,6 +13,16 @@ import { Door } from "./Door";
 import { Chapter, type ChapterHotspot } from "./Chapter";
 import { ProductDrawer } from "./ProductDrawer";
 
+// The bedroom scene uses our own bundled photo (public/bedroom.jpg) rather than a
+// remote/backend image, and the markers are re-positioned to sit on this photo.
+const BEDROOM_IMAGE = `${import.meta.env.BASE_URL}bedroom.jpg`;
+const BEDROOM_HOTSPOTS: Record<string, { x: number; y: number }> = {
+  p_curtains: { x: 9, y: 38 },
+  p_pillowcases_sage: { x: 69, y: 34 },
+  p_duvet_oatmeal: { x: 52, y: 55 },
+  p_sheet_set_ivory: { x: 56, y: 75 },
+};
+
 export function Experience() {
   const { data, loading } = useSiteData();
   const [selected, setSelected] = useState<ChapterHotspot | null>(null);
@@ -27,20 +37,25 @@ export function Experience() {
     const byId = (id: string) => data.products.find((p) => p.id === id);
     return [...data.chapters]
       .sort((a, b) => a.order - b.order)
-      .map((c) => ({
-        id: c.id,
-        numeral: c.numeral,
-        place: c.place,
-        heading: c.heading,
-        line: c.line,
-        image: c.image || data.content.hero.image,
-        hotspots: c.hotspots
-          .map((h) => {
-            const product = byId(h.productId);
-            return product ? { product, x: h.x, y: h.y, poetic: h.poetic } : null;
-          })
-          .filter(Boolean) as ChapterHotspot[],
-      }));
+      .map((c) => {
+        const isBedroom = c.id === "ch_bed";
+        return {
+          id: c.id,
+          numeral: c.numeral,
+          place: c.place,
+          heading: c.heading,
+          line: c.line,
+          image: isBedroom ? BEDROOM_IMAGE : c.image || data.content.hero.image,
+          hotspots: c.hotspots
+            .map((h) => {
+              const product = byId(h.productId);
+              if (!product) return null;
+              const pos = isBedroom ? BEDROOM_HOTSPOTS[h.productId] : undefined;
+              return { product, x: pos?.x ?? h.x, y: pos?.y ?? h.y, poetic: h.poetic };
+            })
+            .filter(Boolean) as ChapterHotspot[],
+        };
+      });
   }, [data]);
 
   const roomImage = chapters[0]?.image || data?.content.hero.image || "";
