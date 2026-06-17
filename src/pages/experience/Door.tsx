@@ -20,7 +20,7 @@ export function Door({ roomImage }: { roomImage: string }) {
   const leftRot = useTransform(scrollYProgress, [0, 0.8], [0, -112]);
   const rightRot = useTransform(scrollYProgress, [0, 0.8], [0, 112]);
   const roomScale = useTransform(scrollYProgress, [0, 1], [1.35, 1.06]);
-  const roomBright = useTransform(scrollYProgress, [0, 0.6], [0.55, 1.08]);
+  const roomBright = useTransform(scrollYProgress, [0, 0.6], [0.25, 1]);
   const roomFilter = useTransform(roomBright, (b) => `brightness(${b})`);
   const doorShadow = useTransform(scrollYProgress, [0, 0.7], [0.5, 0]);
   const hintOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
@@ -54,7 +54,7 @@ export function Door({ roomImage }: { roomImage: string }) {
             fallbackLabel="Room Twenty-Four"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111319]/45 via-transparent to-[#111319]/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111319]/80 via-transparent to-[#111319]/40" />
         </motion.div>
 
         {/* Title revealed as the doors open */}
