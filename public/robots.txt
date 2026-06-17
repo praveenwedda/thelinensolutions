@@ -1,4 +1,4 @@
-# The Linen Solutions — allow all crawlers, including AI answer engines (GEO).
+# The Linen Solutions - allow all crawlers, including AI answer engines (GEO).
 User-agent: *
 Allow: /
 
