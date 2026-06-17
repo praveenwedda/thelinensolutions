@@ -20,8 +20,6 @@ export function ProductDetail() {
   );
 
   const [activeImg, setActiveImg] = useState(0);
-  const [color, setColor] = useState<string>("");
-  const [size, setSize] = useState<string>("");
   const [openSection, setOpenSection] = useState<string | null>("details");
 
   if (!data) return null;
@@ -44,9 +42,6 @@ export function ProductDetail() {
   const related = data.products
     .filter((p) => p.categoryId === product.categoryId && p.id !== product.id)
     .slice(0, 4);
-
-  const selectedColor = color || product.colors[0];
-  const selectedSize = size || product.sizes[0];
 
   const sections = [
     { id: "details", label: "Description", body: product.description },
@@ -145,22 +140,16 @@ export function ProductDetail() {
             {/* Colors */}
             <div className="mt-8">
               <p className="text-xs font-medium uppercase tracking-wider text-linen-700">
-                Available colours — <span className="text-foreground">{selectedColor}</span>
+                Available colours
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {product.colors.map((c) => (
-                  <button
+                  <span
                     key={c}
-                    onClick={() => setColor(c)}
-                    className={cn(
-                      "rounded-full border px-4 py-1.5 text-sm transition-colors cursor-pointer",
-                      selectedColor === c
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-linen-300 text-linen-700 hover:border-primary"
-                    )}
+                    className="rounded-full border border-linen-300 px-4 py-1.5 text-sm text-linen-700"
                   >
                     {c}
-                  </button>
+                  </span>
                 ))}
               </div>
             </div>
@@ -168,22 +157,16 @@ export function ProductDetail() {
             {/* Sizes */}
             <div className="mt-6">
               <p className="text-xs font-medium uppercase tracking-wider text-linen-700">
-                Available sizes — <span className="text-foreground">{selectedSize}</span>
+                Available sizes
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {product.sizes.map((s) => (
-                  <button
+                  <span
                     key={s}
-                    onClick={() => setSize(s)}
-                    className={cn(
-                      "min-w-[3rem] rounded-md border px-4 py-2 text-sm transition-colors cursor-pointer",
-                      selectedSize === s
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-linen-300 text-linen-700 hover:border-primary"
-                    )}
+                    className="min-w-[3rem] rounded-md border border-linen-300 px-4 py-2 text-center text-sm text-linen-700"
                   >
                     {s}
-                  </button>
+                  </span>
                 ))}
               </div>
             </div>
