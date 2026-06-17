@@ -36,7 +36,17 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
   },
 };
 
-/** Apply the bundled product overrides to freshly loaded site data. */
+/**
+ * Homepage scene images, keyed by chapter id. Mirrored into the data so the
+ * admin's Experience editor shows the same images the public site renders.
+ */
+const CHAPTER_IMAGES: Record<string, string> = {
+  ch_bed: `${base}bedroom.jpg`,
+  ch_bath: `${base}bathroom.jpeg`,
+  ch_table: `${base}table.jpg`,
+};
+
+/** Apply the bundled overrides to freshly loaded site data. */
 export function applyImageOverrides(data: SiteData): SiteData {
   const merged: SiteData = {
     ...data,
@@ -44,6 +54,9 @@ export function applyImageOverrides(data: SiteData): SiteData {
       const o = PRODUCT_OVERRIDES[p.id];
       return o ? { ...p, ...o } : p;
     }),
+    chapters: data.chapters.map((c) =>
+      CHAPTER_IMAGES[c.id] ? { ...c, image: CHAPTER_IMAGES[c.id] } : c
+    ),
   };
   // Replace any em-dashes (—) with hyphens across all text coming from the
   // backend (product names, descriptions, content, etc.) so the live site
