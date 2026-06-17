@@ -10,6 +10,7 @@ import {
 import { isFirebaseConfigured } from "../firebase";
 import { LocalProvider } from "./localProvider";
 import { FirebaseProvider } from "./firebaseProvider";
+import { applyImageOverrides } from "./localImages";
 import type { DataProvider, SiteData } from "./types";
 
 // Pick the live provider once, at module load.
@@ -36,7 +37,7 @@ export function DataProviderRoot({ children }: { children: ReactNode }) {
     try {
       setError(null);
       const next = await provider.load();
-      setData(next);
+      setData(applyImageOverrides(next));
     } catch (e) {
       console.error(e);
       setError(
