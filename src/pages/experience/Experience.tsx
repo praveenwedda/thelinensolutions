@@ -13,15 +13,33 @@ import { Door } from "./Door";
 import { Chapter, type ChapterHotspot } from "./Chapter";
 import { ProductDrawer } from "./ProductDrawer";
 
-// The opening scene (revealed behind the doors, before the bedroom) and the
-// bedroom scene both use our own bundled photos rather than remote/backend images.
+// The opening scene (revealed behind the doors) and the individual room scenes
+// use our own bundled photos rather than remote/backend images. Markers are
+// re-positioned per photo so each one sits on the right object.
 const HERO_IMAGE = `${import.meta.env.BASE_URL}heroimage.jpg`;
-const BEDROOM_IMAGE = `${import.meta.env.BASE_URL}bedroom.jpg`;
-const BEDROOM_HOTSPOTS: Record<string, { x: number; y: number }> = {
-  p_curtains: { x: 9, y: 38 },
-  p_pillowcases_sage: { x: 69, y: 34 },
-  p_duvet_oatmeal: { x: 52, y: 55 },
-  p_sheet_set_ivory: { x: 56, y: 75 },
+
+// Scenes hidden from the homepage film.
+const HIDDEN_CHAPTERS = new Set(["ch_living"]);
+
+// Per-scene bundled image overrides.
+const SCENE_IMAGES: Record<string, string> = {
+  ch_bed: `${import.meta.env.BASE_URL}bedroom.jpg`,
+  ch_bath: `${import.meta.env.BASE_URL}bathroom.jpeg`,
+};
+
+// Per-scene marker positions (x/y as % of the scene), keyed by product id.
+const SCENE_HOTSPOTS: Record<string, Record<string, { x: number; y: number }>> = {
+  ch_bed: {
+    p_curtains: { x: 9, y: 38 },
+    p_pillowcases_sage: { x: 69, y: 34 },
+    p_duvet_oatmeal: { x: 52, y: 55 },
+    p_sheet_set_ivory: { x: 56, y: 75 },
+  },
+  ch_bath: {
+    p_towel_waffle: { x: 36, y: 58 },
+    p_robe_waffle: { x: 67, y: 60 },
+    p_bathmat: { x: 47, y: 78 },
+  },
 };
 
 export function Experience() {
@@ -37,21 +55,22 @@ export function Experience() {
     if (!data) return [];
     const byId = (id: string) => data.products.find((p) => p.id === id);
     return [...data.chapters]
+      .filter((c) => !HIDDEN_CHAPTERS.has(c.id))
       .sort((a, b) => a.order - b.order)
       .map((c) => {
-        const isBedroom = c.id === "ch_bed";
+        const spots = SCENE_HOTSPOTS[c.id];
         return {
           id: c.id,
           numeral: c.numeral,
           place: c.place,
           heading: c.heading,
           line: c.line,
-          image: isBedroom ? BEDROOM_IMAGE : c.image || data.content.hero.image,
+          image: SCENE_IMAGES[c.id] ?? c.image ?? data.content.hero.image,
           hotspots: c.hotspots
             .map((h) => {
               const product = byId(h.productId);
               if (!product) return null;
-              const pos = isBedroom ? BEDROOM_HOTSPOTS[h.productId] : undefined;
+              const pos = spots?.[h.productId];
               return { product, x: pos?.x ?? h.x, y: pos?.y ?? h.y, poetic: h.poetic };
             })
             .filter(Boolean) as ChapterHotspot[],
