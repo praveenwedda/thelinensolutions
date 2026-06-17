@@ -45,8 +45,8 @@ export function About() {
       <section className="relative flex min-h-[60vh] items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1600&q=80"
-            alt="Natural linen fabric"
+            src={`${import.meta.env.BASE_URL}cover_x.jpg`}
+            alt="A bedroom dressed in pure linen"
             fallbackLabel="Our Story"
             className="h-full w-full object-cover"
           />
