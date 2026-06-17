@@ -25,6 +25,7 @@ const HIDDEN_CHAPTERS = new Set(["ch_living"]);
 const SCENE_IMAGES: Record<string, string> = {
   ch_bed: `${import.meta.env.BASE_URL}bedroom.jpg`,
   ch_bath: `${import.meta.env.BASE_URL}bathroom.jpeg`,
+  ch_table: `${import.meta.env.BASE_URL}table.jpg`,
 };
 
 // Per-scene marker positions (x/y as % of the scene), keyed by product id.
@@ -39,6 +40,11 @@ const SCENE_HOTSPOTS: Record<string, Record<string, { x: number; y: number }>> =
     p_towel_waffle: { x: 36, y: 58 },
     p_robe_waffle: { x: 67, y: 60 },
     p_bathmat: { x: 47, y: 78 },
+  },
+  ch_table: {
+    p_napkins: { x: 37, y: 44 },
+    p_tablecloth: { x: 60, y: 72 },
+    p_runner: { x: 80, y: 50 },
   },
 };
 
