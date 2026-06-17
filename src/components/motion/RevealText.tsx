@@ -13,7 +13,7 @@ interface RevealTextProps {
 }
 
 /**
- * Editorial headline reveal — each word rises from a clipped baseline,
+ * Editorial headline reveal - each word rises from a clipped baseline,
  * staggered. Wrap a word in underscores (_word_) to render it italic + clay.
  */
 export function RevealText({

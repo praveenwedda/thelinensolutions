@@ -66,7 +66,7 @@ export function ProductDetail() {
   return (
     <article className="pt-24">
       <Seo
-        title={`${product.name} — Pure Linen | The Linen Solutions, Sri Lanka`}
+        title={`${product.name} - Pure Linen | The Linen Solutions, Sri Lanka`}
         description={`${product.shortDescription} Woven from ${product.materials.toLowerCase()}, available in ${product.colors.join(", ")}. From The Linen Solutions, Colombo, Sri Lanka.`}
         path={`/product/${product.slug}`}
         image={product.images[0]}

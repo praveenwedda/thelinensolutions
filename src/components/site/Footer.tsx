@@ -72,7 +72,6 @@ export function Footer() {
             <li><Link to="/shop?category=bedding" className="link-underline">Bedding</Link></li>
             <li><Link to="/shop?category=bath" className="link-underline">Bath</Link></li>
             <li><Link to="/shop?category=table" className="link-underline">Table</Link></li>
-            <li><Link to="/shop?category=living" className="link-underline">Living</Link></li>
           </ul>
         </div>
 
@@ -82,7 +81,6 @@ export function Footer() {
           </h4>
           <ul className="mt-5 space-y-3 text-sm text-paper/70">
             <li><Link to="/about" className="link-underline">Our story</Link></li>
-            <li><Link to="/about#craft" className="link-underline">Our craft</Link></li>
             <li><Link to="/contact" className="link-underline">Contact</Link></li>
           </ul>
         </div>

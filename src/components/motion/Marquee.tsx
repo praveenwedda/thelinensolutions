@@ -8,7 +8,7 @@ interface MarqueeProps {
 }
 
 /** Infinite horizontal marquee. Duplicated track for a seamless loop. */
-export function Marquee({ items, reverse, className, separator = "—" }: MarqueeProps) {
+export function Marquee({ items, reverse, className, separator = "-" }: MarqueeProps) {
   const track = [...items, ...items];
   return (
     <div className={cn("group flex overflow-hidden", className)}>

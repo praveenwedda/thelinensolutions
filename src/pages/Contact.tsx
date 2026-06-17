@@ -20,11 +20,11 @@ export function Contact() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Demo: no backend email yet — acknowledge gracefully.
+    // Demo: no backend email yet - acknowledge gracefully.
     setTimeout(() => {
       setSending(false);
       (e.target as HTMLFormElement).reset();
-      toast.success("Thank you — we'll be in touch within one business day.");
+      toast.success("Thank you - we'll be in touch within one business day.");
     }, 700);
   };
 
@@ -50,7 +50,7 @@ export function Contact() {
     },
     {
       q: "Is your linen 100% pure linen?",
-      a: "Yes — our pieces are woven from 100% European flax and stonewashed for softness. Our textiles are OEKO-TEX® certified, so they are free from harmful substances and safe for sensitive skin.",
+      a: "Yes - our pieces are woven from 100% European flax and stonewashed for softness. Our textiles are OEKO-TEX® certified, so they are free from harmful substances and safe for sensitive skin.",
     },
     {
       q: "Do you deliver across Sri Lanka and internationally?",
@@ -75,8 +75,8 @@ export function Contact() {
   return (
     <>
       <Seo
-        title="Contact — Buy Linen in Sri Lanka | The Linen Solutions, Colombo"
-        description="Order pure linen or enquire about hotel & villa supply. The Linen Solutions, Colombo, Sri Lanka — call/WhatsApp 0768093244. Delivery across Sri Lanka & worldwide."
+        title="Contact - Buy Linen in Sri Lanka | The Linen Solutions, Colombo"
+        description="Order pure linen or enquire about hotel & villa supply. The Linen Solutions, Colombo, Sri Lanka - call/WhatsApp 0768093244. Delivery across Sri Lanka & worldwide."
         path="/contact"
         keywords="buy linen Sri Lanka, linen shop Colombo, hotel linen supplier Sri Lanka, order linen online Sri Lanka"
         jsonLd={faqLd}
@@ -94,7 +94,7 @@ export function Contact() {
           />
           <Reveal delay={0.2} className="lg:col-span-4">
             <p className="max-w-md text-sm leading-relaxed text-ink/60">
-              Questions about an order, a custom size, or wholesale enquiries — our
+              Questions about an order, a custom size, or wholesale enquiries - our
               Colombo studio is here to help.
             </p>
           </Reveal>
@@ -166,7 +166,7 @@ export function Contact() {
         </Reveal>
       </div>
 
-      {/* FAQ — answers the questions buyers search for (AEO/GEO) */}
+      {/* FAQ - answers the questions buyers search for (AEO/GEO) */}
       <section className="border-t border-linen-200 bg-linen-100/40">
         <div className="container-tight py-16 md:py-24">
           <Reveal className="mb-10 text-center">

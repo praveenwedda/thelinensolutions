@@ -55,13 +55,13 @@ export function Shop() {
       <Seo
         title={
           activeCat
-            ? `${activeCat.name} Linen — The Linen Solutions, Sri Lanka`
-            : "Shop Pure Linen — Bed, Bath, Table & Living Collection | Sri Lanka"
+            ? `${activeCat.name} Linen - The Linen Solutions, Sri Lanka`
+            : "Shop Pure Linen - Bed, Bath, Table & Living Collection | Sri Lanka"
         }
         description={
           activeCat
-            ? `${activeCat.description} Shop ${activeCat.name.toLowerCase()} linen from The Linen Solutions, Colombo, Sri Lanka — 100% European flax, OEKO-TEX® certified.`
-            : "Browse the full pure-linen collection from The Linen Solutions, Sri Lanka — bed linen, bath linen, table linen and living textiles in 100% stonewashed European flax. For homes, hotels and villas."
+            ? `${activeCat.description} Shop ${activeCat.name.toLowerCase()} linen from The Linen Solutions, Colombo, Sri Lanka - 100% European flax, OEKO-TEX® certified.`
+            : "Browse the full pure-linen collection from The Linen Solutions, Sri Lanka - bed linen, bath linen, table linen and living textiles in 100% stonewashed European flax. For homes, hotels and villas."
         }
         path={activeCat ? `/shop?category=${activeCat.slug}` : "/shop"}
         keywords="linen Sri Lanka, bed linen, bath linen, table linen, hotel linen Colombo, pure linen bedding"

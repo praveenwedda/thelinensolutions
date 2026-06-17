@@ -10,7 +10,7 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 /**
  * Image that gracefully degrades to a tasteful linen-toned placeholder
- * if the source fails to load — so a broken URL never breaks the design.
+ * if the source fails to load - so a broken URL never breaks the design.
  */
 export function ImageWithFallback({
   src,

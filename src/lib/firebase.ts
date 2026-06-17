@@ -24,7 +24,7 @@ if (isFirebaseConfigured) {
   app = initializeApp(config);
   db = getFirestore(app);
   auth = getAuth(app);
-  // Storage is optional — only initialise it when a bucket is configured.
+  // Storage is optional - only initialise it when a bucket is configured.
   if (config.storageBucket) {
     storage = getStorage(app);
   }

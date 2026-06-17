@@ -10,7 +10,7 @@ const steps = [
   {
     icon: Leaf,
     title: "Grown, not made",
-    body: "It begins in the flax fields of Western Europe — a crop that needs little water and no irrigation, leaving the land better than it found it.",
+    body: "It begins in the flax fields of Western Europe - a crop that needs little water and no irrigation, leaving the land better than it found it.",
   },
   {
     icon: Hand,
@@ -37,7 +37,7 @@ export function About() {
   return (
     <>
       <Seo
-        title="Our Story — Pure Linen Handcrafted in Colombo | The Linen Solutions"
+        title="Our Story - Pure Linen Handcrafted in Colombo | The Linen Solutions"
         description="From a small Colombo atelier to a linen house trusted by homes, hotels and villas across Sri Lanka and beyond. 100% European flax, stonewashed by hand, OEKO-TEX® certified."
         path="/about"
       />
@@ -74,7 +74,7 @@ export function About() {
           <p className="mt-6 leading-relaxed text-muted-foreground">{story.body}</p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             What started as a small atelier supplying boutique hotels has grown into a
-            collection trusted by thousands of homes across the world — yet our promise
+            collection trusted by thousands of homes across the world - yet our promise
             has never changed: pure materials, honest craft, and textiles made to be
             loved for years, not seasons.
           </p>

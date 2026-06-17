@@ -124,7 +124,7 @@ export function Experience() {
     <div className="relative bg-[#111319] text-paper">
       <Seo
         title="The Linen Solutions | Luxury Pure Linen for Homes & Hotels in Sri Lanka"
-        description="Step inside a room dressed entirely in pure linen. The Linen Solutions crafts 100% European-flax bed, bath, table & living linen in Colombo, Sri Lanka — for homes, hotels and villas. Shipped nationwide & worldwide."
+        description="Step inside a room dressed entirely in pure linen. The Linen Solutions crafts 100% European-flax bed, bath, table & living linen in Colombo, Sri Lanka - for homes, hotels and villas. Shipped nationwide & worldwide."
         path="/"
       />
       <SmoothScroll />

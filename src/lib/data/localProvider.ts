@@ -38,7 +38,7 @@ function write(data: SiteData): void {
 
 /**
  * Browser-backed provider. Used automatically when Firebase is not configured.
- * Edits persist in localStorage on this device — ideal for local demos.
+ * Edits persist in localStorage on this device - ideal for local demos.
  */
 export class LocalProvider implements DataProvider {
   readonly mode = "local" as const;
@@ -111,7 +111,7 @@ export class LocalProvider implements DataProvider {
     write(data);
   }
 
-  /** No object storage locally — embed the image as a data URL. */
+  /** No object storage locally - embed the image as a data URL. */
   async uploadImage(file: File): Promise<string> {
     return await new Promise((resolve, reject) => {
       const reader = new FileReader();

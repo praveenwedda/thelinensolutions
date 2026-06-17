@@ -38,7 +38,7 @@ export function ExperienceAdmin() {
     try {
       await provider.upsertChapter(emptyChapter(chapters.length + 1));
       await refresh();
-      toast.success("Scene added — scroll down to edit it.");
+      toast.success("Scene added - scroll down to edit it.");
     } catch (e) {
       toast.error(saveErrorMessage(e));
     }
@@ -61,7 +61,7 @@ export function ExperienceAdmin() {
         <div>
           <h1 className="font-serif text-3xl text-foreground md:text-4xl">The Experience</h1>
           <p className="mt-1 max-w-xl text-muted-foreground">
-            Your homepage film. Each scene has an image and clickable markers — click on
+            Your homepage film. Each scene has an image and clickable markers - click on
             the image to drop a marker, drag to position it, then choose which product it
             reveals.
           </p>
@@ -123,7 +123,7 @@ function ChapterCard({
   const set = (patch: Partial<ExperienceChapter>) => setDraft((d) => ({ ...d, ...patch }));
   const setHotspots = (hotspots: Hotspot[]) => set({ hotspots });
   const productName = (id: string) =>
-    products.find((p) => p.id === id)?.name.split("—")[0].trim() ?? "Unassigned";
+    products.find((p) => p.id === id)?.name.split("-")[0].trim() ?? "Unassigned";
 
   const posFromEvent = (e: React.PointerEvent) => {
     const r = canvasRef.current!.getBoundingClientRect();
@@ -247,7 +247,7 @@ function ChapterCard({
 
         {/* marker canvas */}
         <div>
-          <Label>Markers — click the image to add, drag to position</Label>
+          <Label>Markers - click the image to add, drag to position</Label>
           <div
             ref={canvasRef}
             onPointerDown={onCanvasPointerDown}
@@ -313,7 +313,7 @@ function ChapterCard({
                         onChange={(e) => updateHotspot(h.id, { productId: e.target.value })}
                         className="h-10 w-full rounded-md border border-input bg-white px-2 text-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer"
                       >
-                        <option value="">— choose —</option>
+                        <option value="">- choose -</option>
                         {products.map((p) => (
                           <option key={p.id} value={p.id}>{p.name}</option>
                         ))}

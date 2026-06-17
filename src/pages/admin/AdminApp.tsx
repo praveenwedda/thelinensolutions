@@ -30,7 +30,7 @@ export function AdminApp() {
         }
       })
       .catch(() => {
-        toast.error("Couldn't initialise the database — check your Firestore rules.");
+        toast.error("Couldn't initialise the database - check your Firestore rules.");
       });
   }, [user, provider, refresh]);
 

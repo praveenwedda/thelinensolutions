@@ -78,7 +78,7 @@ export function Dashboard() {
           </div>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             {provider.mode === "local"
-              ? "You're in demo mode. Changes are saved to this browser only — perfect for previewing. Add your Firebase keys to .env to publish live, shared content."
+              ? "You're in demo mode. Changes are saved to this browser only - perfect for previewing. Add your Firebase keys to .env to publish live, shared content."
               : "Connected to Firebase. Every change you save here is published live to your website instantly."}
           </p>
         </div>

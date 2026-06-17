@@ -13,7 +13,7 @@ export const SEED: SiteData = {
       eyebrow: "Pure European Flax · Stonewashed",
       title: "Linen woven for a softer, slower life",
       subtitle:
-        "Sustainably crafted bedding, bath, table and living textiles in pure stonewashed linen — breathable in the heat, warm in the cool, and only more beautiful with every wash.",
+        "Sustainably crafted bedding, bath, table and living textiles in pure stonewashed linen - breathable in the heat, warm in the cool, and only more beautiful with every wash.",
       image: img("1631049307264-da0ec9d70304", 1600),
       ctaPrimary: "Explore the Collection",
       ctaSecondary: "Our Story",
@@ -21,7 +21,7 @@ export const SEED: SiteData = {
     story: {
       eyebrow: "Our Craft",
       title: "From the flax field to your home",
-      body: "The Linen Solutions began with a simple belief — that the things we live with every day should be honest, natural and made to last. We weave our textiles from pure European flax, then stonewash each piece by hand for that signature lived-in softness. No synthetics, no shortcuts; just linen as it was always meant to be. Crafted in Colombo and shipped with care across the world.",
+      body: "The Linen Solutions began with a simple belief - that the things we live with every day should be honest, natural and made to last. We weave our textiles from pure European flax, then stonewash each piece by hand for that signature lived-in softness. No synthetics, no shortcuts; just linen as it was always meant to be. Crafted in Colombo and shipped with care across the world.",
       image: img("1604176354204-9268737828e4", 1200),
       stats: [
         { value: "100%", label: "Pure European flax" },
@@ -34,7 +34,7 @@ export const SEED: SiteData = {
       {
         title: "Pure Natural Fibre",
         description:
-          "Woven from 100% long-staple European flax — breathable, hypoallergenic and naturally temperature-regulating.",
+          "Woven from 100% long-staple European flax - breathable, hypoallergenic and naturally temperature-regulating.",
         icon: "leaf",
       },
       {
@@ -94,7 +94,7 @@ export const SEED: SiteData = {
       name: "Bath",
       slug: "bath",
       description:
-        "Waffle and loop-weave towels, robes and mats — fast-drying and impossibly soft.",
+        "Waffle and loop-weave towels, robes and mats - fast-drying and impossibly soft.",
       image: img("1584100936595-c0654b55a2e6", 1000),
       order: 2,
     },
@@ -122,7 +122,7 @@ export const SEED: SiteData = {
     // ── Bedding ──
     {
       id: "p_duvet_oatmeal",
-      name: "Stonewashed Duvet Cover — Oatmeal",
+      name: "Stonewashed Duvet Cover - Oatmeal",
       slug: "stonewashed-duvet-cover-oatmeal",
       categoryId: "cat_bedding",
       price: 189,
@@ -142,7 +142,7 @@ export const SEED: SiteData = {
     },
     {
       id: "p_sheet_set_ivory",
-      name: "Core Linen Sheet Set — Ivory",
+      name: "Core Linen Sheet Set - Ivory",
       slug: "core-linen-sheet-set-ivory",
       categoryId: "cat_bedding",
       price: 245,
@@ -161,13 +161,13 @@ export const SEED: SiteData = {
     },
     {
       id: "p_pillowcases_sage",
-      name: "Pillowcase Pair — Sage",
+      name: "Pillowcase Pair - Sage",
       slug: "pillowcase-pair-sage",
       categoryId: "cat_bedding",
       price: 69,
       shortDescription: "A pair of envelope-closure pillowcases.",
       description:
-        "Soft, cool and quietly luxurious — a pair of pure linen pillowcases with a clean envelope closure to keep pillows tucked away. The understated sage tone pairs with almost everything in the collection.",
+        "Soft, cool and quietly luxurious - a pair of pure linen pillowcases with a clean envelope closure to keep pillows tucked away. The understated sage tone pairs with almost everything in the collection.",
       images: [img("1616627561839-074385245ff6"), img("1631049307264-da0ec9d70304")],
       colors: ["Sage", "Ivory", "Oatmeal", "Terracotta"],
       sizes: ["Standard", "King"],
@@ -179,7 +179,7 @@ export const SEED: SiteData = {
     },
     {
       id: "p_duvet_charcoal",
-      name: "Stonewashed Duvet Cover — Charcoal",
+      name: "Stonewashed Duvet Cover - Charcoal",
       slug: "stonewashed-duvet-cover-charcoal",
       categoryId: "cat_bedding",
       price: 189,
@@ -200,13 +200,13 @@ export const SEED: SiteData = {
     // ── Bath ──
     {
       id: "p_towel_waffle",
-      name: "Waffle Bath Towel — Natural",
+      name: "Waffle Bath Towel - Natural",
       slug: "waffle-bath-towel-natural",
       categoryId: "cat_bath",
       price: 49,
       shortDescription: "Quick-drying waffle-weave bath towel.",
       description:
-        "A lighter, faster-drying alternative to terry. Our waffle-weave bath towel is woven from a linen-cotton blend that grows softer and more absorbent with use — perfect for warm, humid climates where heavy towels never quite dry.",
+        "A lighter, faster-drying alternative to terry. Our waffle-weave bath towel is woven from a linen-cotton blend that grows softer and more absorbent with use - perfect for warm, humid climates where heavy towels never quite dry.",
       images: [img("1584100936595-c0654b55a2e6"), img("1620626011761-996317b8d101")],
       colors: ["Natural", "White", "Sage", "Clay"],
       sizes: ["Hand", "Bath", "Bath Sheet"],
@@ -219,13 +219,13 @@ export const SEED: SiteData = {
     },
     {
       id: "p_robe_waffle",
-      name: "Waffle Bath Robe — Clay",
+      name: "Waffle Bath Robe - Clay",
       slug: "waffle-bath-robe-clay",
       categoryId: "cat_bath",
       price: 129,
       shortDescription: "Lightweight unisex waffle robe with pockets.",
       description:
-        "The robe you'll reach for every morning. Lightweight waffle weave, a generous unisex cut, deep patch pockets and a self-tie belt — relaxed enough for slow Sundays, refined enough for guests.",
+        "The robe you'll reach for every morning. Lightweight waffle weave, a generous unisex cut, deep patch pockets and a self-tie belt - relaxed enough for slow Sundays, refined enough for guests.",
       images: [img("1620626011761-996317b8d101"), img("1583845112203-29329902332e")],
       colors: ["Clay", "Natural", "Charcoal"],
       sizes: ["S/M", "L/XL"],
@@ -237,7 +237,7 @@ export const SEED: SiteData = {
     },
     {
       id: "p_bathmat",
-      name: "Linen Bath Mat — Stone",
+      name: "Linen Bath Mat - Stone",
       slug: "linen-bath-mat-stone",
       categoryId: "cat_bath",
       price: 39,
@@ -257,13 +257,13 @@ export const SEED: SiteData = {
     // ── Table ──
     {
       id: "p_tablecloth",
-      name: "Linen Tablecloth — Sand",
+      name: "Linen Tablecloth - Sand",
       slug: "linen-tablecloth-sand",
       categoryId: "cat_table",
       price: 119,
       shortDescription: "Generously sized tablecloth with a soft drape.",
       description:
-        "Set the table for everything from a Tuesday supper to a long, lingering celebration. Woven from pure linen with a soft, fluid drape and a mitred hem, our tablecloth wears its creases with charm — no ironing required.",
+        "Set the table for everything from a Tuesday supper to a long, lingering celebration. Woven from pure linen with a soft, fluid drape and a mitred hem, our tablecloth wears its creases with charm - no ironing required.",
       images: [img("1556910103-1c02745aae4d"), img("1530018607912-eff2daa1bac4")],
       colors: ["Sand", "White", "Sage", "Terracotta"],
       sizes: ["Seats 4–6", "Seats 6–8", "Seats 8–10"],
@@ -276,13 +276,13 @@ export const SEED: SiteData = {
     },
     {
       id: "p_napkins",
-      name: "Linen Napkins — Set of 4",
+      name: "Linen Napkins - Set of 4",
       slug: "linen-napkins-set-of-4",
       categoryId: "cat_table",
       price: 45,
       shortDescription: "Oversized everyday napkins, set of four.",
       description:
-        "Generously oversized, softly stonewashed and hemmed to last — the kind of napkin that makes an ordinary dinner feel considered. Mix tones for a relaxed, collected table.",
+        "Generously oversized, softly stonewashed and hemmed to last - the kind of napkin that makes an ordinary dinner feel considered. Mix tones for a relaxed, collected table.",
       images: [img("1530018607912-eff2daa1bac4"), img("1556910103-1c02745aae4d")],
       colors: ["Sand", "White", "Sage", "Terracotta", "Charcoal"],
       sizes: ["45 × 45 cm"],
@@ -294,7 +294,7 @@ export const SEED: SiteData = {
     },
     {
       id: "p_runner",
-      name: "Table Runner — Terracotta",
+      name: "Table Runner - Terracotta",
       slug: "table-runner-terracotta",
       categoryId: "cat_table",
       price: 55,
@@ -314,7 +314,7 @@ export const SEED: SiteData = {
     // ── Living ──
     {
       id: "p_curtains",
-      name: "Sheer Linen Curtains — Ivory (Pair)",
+      name: "Sheer Linen Curtains - Ivory (Pair)",
       slug: "sheer-linen-curtains-ivory",
       categoryId: "cat_living",
       price: 159,
@@ -333,13 +333,13 @@ export const SEED: SiteData = {
     },
     {
       id: "p_throw",
-      name: "Linen Throw Blanket — Sage",
+      name: "Linen Throw Blanket - Sage",
       slug: "linen-throw-blanket-sage",
       categoryId: "cat_living",
       price: 99,
       shortDescription: "A fringed throw for the sofa or the foot of the bed.",
       description:
-        "Lightweight, breathable and endlessly draped — the throw that lives on the arm of the sofa and the foot of the bed. Hand-knotted fringe and a soft, open weave make it as decorative as it is useful.",
+        "Lightweight, breathable and endlessly draped - the throw that lives on the arm of the sofa and the foot of the bed. Hand-knotted fringe and a soft, open weave make it as decorative as it is useful.",
       images: [img("1560185007-c5ca9d2c014d"), img("1616594039964-ae9021a400a0")],
       colors: ["Sage", "Oatmeal", "Terracotta", "Charcoal"],
       sizes: ["130 × 170 cm"],
@@ -351,7 +351,7 @@ export const SEED: SiteData = {
     },
     {
       id: "p_cushion",
-      name: "Cushion Cover — Oatmeal",
+      name: "Cushion Cover - Oatmeal",
       slug: "cushion-cover-oatmeal",
       categoryId: "cat_living",
       price: 39,
@@ -376,7 +376,7 @@ export const SEED: SiteData = {
       numeral: "I",
       place: "The Bedroom",
       heading: "Where the day is undone",
-      line: "Sink into pure stonewashed flax — cool through Colombo nights, and only softer with every wash.",
+      line: "Sink into pure stonewashed flax - cool through Colombo nights, and only softer with every wash.",
       image: img("1631049307264-da0ec9d70304", 1600),
       hotspots: [
         { id: "h_bed_1", productId: "p_curtains", x: 14, y: 40, poetic: "The light, gently filtered all day long." },
@@ -391,7 +391,7 @@ export const SEED: SiteData = {
       numeral: "II",
       place: "The Living Corner",
       heading: "Where evenings linger",
-      line: "A throw within reach, a cushion to sink into — the quiet hours, dressed in linen.",
+      line: "A throw within reach, a cushion to sink into - the quiet hours, dressed in linen.",
       image: img("1567016432779-094069958ea5", 1600),
       hotspots: [
         { id: "h_liv_1", productId: "p_cushion", x: 40, y: 54, poetic: "Soften every corner of the room." },
@@ -404,7 +404,7 @@ export const SEED: SiteData = {
       numeral: "III",
       place: "The Bath",
       heading: "Where morning begins",
-      line: "Waffle-weave and warmth — folded and ready, the first soft thing your hands reach for each day.",
+      line: "Waffle-weave and warmth - folded and ready, the first soft thing your hands reach for each day.",
       image: img("1620799140408-edc6dcb6d633", 1600),
       hotspots: [
         { id: "h_bath_1", productId: "p_robe_waffle", x: 38, y: 40, poetic: "Morning, wrapped around you." },
@@ -440,7 +440,7 @@ export const SEED: SiteData = {
     {
       id: "t2",
       quote:
-        "The quality is genuinely exceptional — you can feel that it's real linen. The sheet set has survived a year of constant washing and looks better than the day it arrived.",
+        "The quality is genuinely exceptional - you can feel that it's real linen. The sheet set has survived a year of constant washing and looks better than the day it arrived.",
       author: "James W.",
       location: "Singapore",
       rating: 5,
@@ -448,7 +448,7 @@ export const SEED: SiteData = {
     {
       id: "t3",
       quote:
-        "I bought the tablecloth and napkins for a dinner party and everyone asked where they were from. Effortlessly elegant, and no ironing — what more could you want?",
+        "I bought the tablecloth and napkins for a dinner party and everyone asked where they were from. Effortlessly elegant, and no ironing - what more could you want?",
       author: "Priya M.",
       location: "London",
       rating: 5,

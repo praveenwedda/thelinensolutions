@@ -79,14 +79,14 @@ export function Chapter({ chapter, hotspots, activeId, onSelect }: ChapterProps)
             fallbackLabel={chapter.place}
             className="absolute inset-0 h-full w-full object-cover brightness-105"
           />
-          {/* soft bottom scrim only — keeps the copy legible without tinting the whole photo */}
+          {/* soft bottom scrim only - keeps the copy legible without tinting the whole photo */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#111319]/80 via-[#111319]/8 to-transparent" />
           {/* gentle vignette for depth */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_64%,rgba(0,0,0,0.18))]" />
         </motion.div>
       </motion.div>
 
-      {/* hotspot layer — shares the scene's transform so each marker stays on its object,
+      {/* hotspot layer - shares the scene's transform so each marker stays on its object,
           but sits above the copy so text never covers a marker */}
       <motion.div
         className="pointer-events-none absolute inset-0 z-20 scale-[1.12]"
@@ -99,7 +99,7 @@ export function Chapter({ chapter, hotspots, activeId, onSelect }: ChapterProps)
               x={h.x}
               y={h.y}
               index={i}
-              label={h.product.name.split("—")[0].trim()}
+              label={h.product.name.split("-")[0].trim()}
               active={activeId === h.product.id}
               onClick={() => onSelect(h)}
             />

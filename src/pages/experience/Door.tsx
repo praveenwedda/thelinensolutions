@@ -106,7 +106,7 @@ export function Door({ roomImage }: { roomImage: string }) {
           style={{ opacity: doorShadow }}
         />
 
-        {/* welcome header — centred on the starting screen only, fades on entry */}
+        {/* welcome header - centred on the starting screen only, fades on entry */}
         <motion.div
           style={reduce ? undefined : { opacity: welcomeOpacity, y: welcomeY }}
           className="pointer-events-none absolute inset-x-0 top-[19%] z-40 flex justify-center px-6"

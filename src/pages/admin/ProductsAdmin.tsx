@@ -40,7 +40,7 @@ export function ProductsAdmin() {
 
   if (!data) return null;
   const { products, categories } = data;
-  const catName = (id: string) => categories.find((c) => c.id === id)?.name ?? "—";
+  const catName = (id: string) => categories.find((c) => c.id === id)?.name ?? "-";
 
   const save = async (p: Product) => {
     if (!p.name.trim()) return toast.error("Product name is required.");
@@ -188,7 +188,7 @@ function ProductForm({
       <div className="max-h-[70vh] space-y-5 overflow-y-auto pr-1">
         <div>
           <Label>Name</Label>
-          <Input value={product.name} onChange={(e) => set({ name: e.target.value })} placeholder="Stonewashed Duvet Cover — Oatmeal" />
+          <Input value={product.name} onChange={(e) => set({ name: e.target.value })} placeholder="Stonewashed Duvet Cover - Oatmeal" />
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">

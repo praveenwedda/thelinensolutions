@@ -20,7 +20,7 @@ import type {
 import { SEED } from "./seed";
 
 // Refs are computed lazily so this module is safe to import even when Firebase
-// is not configured (db === null) — they're only ever called in Firebase mode.
+// is not configured (db === null) - they're only ever called in Firebase mode.
 const settingsDoc = () => doc(db!, "site", "content");
 const productsCol = () => collection(db!, "products");
 const categoriesCol = () => collection(db!, "categories");
@@ -50,7 +50,7 @@ export class FirebaseProvider implements DataProvider {
         getDocs(chaptersCol()),
       ]);
     } catch (e) {
-      // Reads blocked (e.g. security rules not published yet) — show seed
+      // Reads blocked (e.g. security rules not published yet) - show seed
       // content so the public site never breaks. Admin writes will prompt
       // for the correct rules.
       console.warn("Firestore read failed; showing seed content.", e);
@@ -81,7 +81,7 @@ export class FirebaseProvider implements DataProvider {
 
   /**
    * Populate an empty database with the starter content. Safe to call on every
-   * admin login — it only writes when the database is actually empty, and runs
+   * admin login - it only writes when the database is actually empty, and runs
    * authenticated so it satisfies the "write if signed-in" security rule.
    */
   async ensureSeeded(): Promise<boolean> {

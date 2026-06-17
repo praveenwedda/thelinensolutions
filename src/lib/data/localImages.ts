@@ -14,7 +14,7 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
     images: [`${base}bedding1.jpg`, `${base}bedding2.jpg`],
   },
   p_towel_waffle: {
-    name: "Bath Towel — Natural",
+    name: "Bath Towel - Natural",
     images: [`${base}towels1.jpg`, `${base}towels2.jpg`],
   },
   p_tablecloth: {
@@ -38,11 +38,15 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
 
 /** Apply the bundled product overrides to freshly loaded site data. */
 export function applyImageOverrides(data: SiteData): SiteData {
-  return {
+  const merged: SiteData = {
     ...data,
     products: data.products.map((p) => {
       const o = PRODUCT_OVERRIDES[p.id];
       return o ? { ...p, ...o } : p;
     }),
   };
+  // Replace any em-dashes (—) with hyphens across all text coming from the
+  // backend (product names, descriptions, content, etc.) so the live site
+  // never shows em-dashes regardless of what's stored in Firestore.
+  return JSON.parse(JSON.stringify(merged).replace(/—/g, "-")) as SiteData;
 }
