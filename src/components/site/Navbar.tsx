@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+const LOGO = `${import.meta.env.BASE_URL}linen-logo.png`;
+
 const links = [
   { to: "/", label: "Home" },
   { to: "/shop", label: "Collection" },
@@ -34,16 +36,9 @@ export function Navbar() {
       )}
     >
       <nav className="container-tight flex h-20 items-center justify-between">
-        <Link to="/" className="group flex items-center gap-3" aria-label="The Linen Solutions home">
-          <span className="grid h-10 w-10 place-items-center rounded-sm bg-ink font-serif text-xl leading-none text-paper">
-            L
-          </span>
-          <span className="hidden flex-col leading-none sm:flex">
-            <span className="font-serif text-xl tracking-tight text-ink">The Linen Solutions</span>
-            <span className="mt-0.5 text-[9px] font-medium uppercase tracking-[0.3em] text-clay-600">
-              Pure Linen · Colombo
-            </span>
-          </span>
+        <Link to="/" className="flex items-center" aria-label="The Linen Solutions home">
+          {/* The link carries the accessible name, so the mark is decorative. */}
+          <img src={LOGO} alt="" className="h-10 w-auto sm:h-11" />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">
