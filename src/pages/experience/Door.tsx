@@ -4,6 +4,8 @@ import { ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { getLenis } from "@/components/motion/SmoothScroll";
 
+const LOGO = `${import.meta.env.BASE_URL}linen-logo.png`;
+
 /**
  * Opening scene: a pair of warm wooden doors that swing open on scroll,
  * revealing the linen-dressed room beyond. Built entirely in CSS so it is
@@ -109,10 +111,18 @@ export function Door({ roomImage }: { roomImage: string }) {
         {/* welcome header - centred on the starting screen only, fades on entry */}
         <motion.div
           style={reduce ? undefined : { opacity: welcomeOpacity, y: welcomeY }}
-          className="pointer-events-none absolute inset-x-0 top-[19%] z-40 flex justify-center px-6"
+          className="pointer-events-none absolute inset-x-0 top-[22%] z-40 flex justify-center px-6"
         >
           <div className="max-w-3xl text-center">
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-clay-600">
+            <img
+              src={LOGO}
+              alt="The Linen Solutions"
+              // Sized to match the width of the eyebrow beneath it.
+              className="mx-auto mb-5 block w-[155px]"
+            />
+            {/* pl compensates for the trailing letter-space so the caps centre
+                on the logo above rather than sitting 2px to its left. */}
+            <p className="pl-[4px] text-[10px] font-medium uppercase tracking-[0.4em] text-clay-600">
               A warm welcome
             </p>
             <h2 className="mt-4 font-serif text-[clamp(1.55rem,3.4vw,2.9rem)] font-light leading-[1.15] tracking-tight text-ink">

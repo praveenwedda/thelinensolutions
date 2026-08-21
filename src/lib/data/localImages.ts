@@ -11,28 +11,28 @@ const base = import.meta.env.BASE_URL;
 const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
   p_sheet_set_ivory: {
     name: "Core Linen Sheet Set",
-    images: [`${base}bedding1.jpg`, `${base}bedding2.jpg`],
+    images: [`${base}bedding1new.jpeg`, `${base}bedding2new.jpeg`],
   },
   p_towel_waffle: {
     name: "Bath Towel - Natural",
-    images: [`${base}towels1.jpg`, `${base}towels2.jpg`],
+    images: [`${base}newtowels1.jpeg`, `${base}towels2.jpg`],
   },
   p_tablecloth: {
-    images: [`${base}tablecloth1.jpg`, `${base}tablecloth2.jpg`],
+    images: [`${base}newtablecloth.jpeg`, `${base}newtablecloth2.jpeg`],
   },
   p_duvet_oatmeal: {
     name: "Stonewashed Duvet Cover",
-    images: [`${base}duvet1.jpg`, `${base}duvet2.jpg`],
+    images: [`${base}duvet1new.jpeg`, `${base}duvet2new.jpeg`],
   },
   p_napkins: {
-    images: [`${base}napkins1.jpg`, `${base}napkins2.jpg`],
+    images: [`${base}napkins1new.jpeg`, `${base}napkins2new.jpeg`],
   },
   p_robe_waffle: {
     name: "Waffle Bath Robe",
-    images: [`${base}robe1.jpg`, `${base}robe2.jpg`],
+    images: [`${base}robe1new.jpeg`, `${base}robe2new.jpeg`],
   },
   p_pillowcases_sage: {
-    images: [`${base}pillow2.jpg`, `${base}pillows1.jpg`],
+    images: [`${base}pillow2new.jpeg`, `${base}pillow1new.jpeg`],
   },
 };
 
@@ -41,8 +41,8 @@ const PRODUCT_OVERRIDES: Record<string, Partial<Product>> = {
  * admin's Experience editor shows the same images the public site renders.
  */
 const CHAPTER_IMAGES: Record<string, string> = {
-  ch_bed: `${base}bedroom.jpg`,
-  ch_bath: `${base}bathroom.jpeg`,
+  ch_bed: `${base}bedroomnew.jpeg`,
+  ch_bath: `${base}bathroom.jpg`,
   ch_table: `${base}table.jpg`,
 };
 

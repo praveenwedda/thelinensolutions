@@ -16,30 +16,30 @@ import { ProductDrawer } from "./ProductDrawer";
 // The opening scene (revealed behind the doors) and the individual room scenes
 // use our own bundled photos rather than remote/backend images. Markers are
 // re-positioned per photo so each one sits on the right object.
-const HERO_IMAGE = `${import.meta.env.BASE_URL}heroimage.jpg`;
+const HERO_IMAGE = `${import.meta.env.BASE_URL}heronew.jpeg`;
 
 // Scenes hidden from the homepage film.
 const HIDDEN_CHAPTERS = new Set(["ch_living"]);
 
 // Per-scene bundled image overrides.
 const SCENE_IMAGES: Record<string, string> = {
-  ch_bed: `${import.meta.env.BASE_URL}bedroom.jpg`,
-  ch_bath: `${import.meta.env.BASE_URL}bathroom.jpeg`,
+  ch_bed: `${import.meta.env.BASE_URL}bedroomnew.jpeg`,
+  ch_bath: `${import.meta.env.BASE_URL}bathroom.jpg`,
   ch_table: `${import.meta.env.BASE_URL}table.jpg`,
 };
 
 // Per-scene marker positions (x/y as % of the scene), keyed by product id.
 const SCENE_HOTSPOTS: Record<string, Record<string, { x: number; y: number }>> = {
   ch_bed: {
-    p_curtains: { x: 9, y: 38 },
+    p_curtains: { x: 8, y: 47 },
     p_pillowcases_sage: { x: 69, y: 34 },
     p_duvet_oatmeal: { x: 52, y: 55 },
-    p_sheet_set_ivory: { x: 56, y: 75 },
+    p_sheet_set_ivory: { x: 72, y: 67 },
   },
   ch_bath: {
-    p_towel_waffle: { x: 36, y: 58 },
-    p_robe_waffle: { x: 67, y: 60 },
-    p_bathmat: { x: 47, y: 78 },
+    p_towel_waffle: { x: 35, y: 58 },
+    p_robe_waffle: { x: 71, y: 74 },
+    p_bathmat: { x: 62, y: 80 },
   },
   ch_table: {
     p_napkins: { x: 37, y: 44 },
@@ -141,15 +141,7 @@ export function Experience() {
       <div className="pointer-events-none fixed inset-x-0 top-0 z-[48] h-44 bg-gradient-to-b from-[#111319]/55 to-transparent" />
 
       {/* minimal header */}
-      <header className="fixed inset-x-0 top-0 z-[55] flex items-center justify-between px-6 py-5 md:px-10">
-        <Link to="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-sm bg-clay-500 font-serif text-lg text-paper">
-            L
-          </span>
-          <span className="hidden font-serif text-lg tracking-tight text-paper sm:block">
-            The Linen Solutions
-          </span>
-        </Link>
+      <header className="fixed inset-x-0 top-0 z-[55] flex items-center justify-end px-6 py-5 md:px-10">
         <Link
           to="/shop"
           className="link-underline text-[11px] font-medium uppercase tracking-[0.2em] text-paper/75 hover:text-paper"
